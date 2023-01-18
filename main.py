@@ -48,9 +48,8 @@ def get_tickers_data(symbol_list):
     tickers_df = pd.DataFrame()
     for symbol in symbol_list:
         ticker_df = get_single_tickr_data(symbol)
-        tickers_df = tickers_df.append(ticker_df)
-        # tickers_df = pd.concat(tickers_df,ticker_df)
-        # tickers = pd.concat(ticker_df,ignore_index=True)
+        # tickers_df = tickers_df.append(ticker_df)
+        tickers_df = pd.concat([tickers_df,ticker_df],axis=0)
     return tickers_df
 
 def main():
