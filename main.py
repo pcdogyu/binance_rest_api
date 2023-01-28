@@ -19,7 +19,7 @@ def get_tickers_data(symbol_list):
     return tickers_df
 
 def main():
-    symbol_list = ['BTCUSDT','ETHUSDT','BCHUSDT','LTCUSDT']
+    symbol_list = ['BTCUSDT','ETHUSDT','BCHUSDT','LTCUSDT','XRPUSDT','XLMUSDT']
     tickers_df = get_tickers_data(symbol_list)
     print(tickers_df[['symbol','askQty','askPrice','bidPrice', 'bidQty','volume', 'closeTime']])
 
