@@ -8,27 +8,6 @@ def get_single_tickr_data(symbol):
     resp_obj = requests.get(ticker_url)
     json_obj = resp_obj.json()
     fmt_df = pd.DataFrame(json_obj,index=[0])
-    # # print(json_obj)
-    # # fmt_df = pd.DataFrame(json_obj,index=[1])   
-    # # print(fmt_df)
-    # # col_df = pd.DataFrame(json_obj,index=[0]).columns
-    # # print(col_df)
-    # fmt_df['closeTime']= pd.to_datetime(datetime.utcnow())
-    # # print(fmt_df)
-    # # print(fmt_df[['symbol','askQty','askPrice','bidPrice', 'bidQty','volume', 'closeTime']])
-    # print("fmt df")
-    # print(fmt_df[['symbol','prevClosePrice','closeTime','count']])
-    
-    # ticker_df = pd.DataFrame(index=[0], columns=['datetime'] + fmt_df.index.tolist())
-    
-    # ticker_df['datetime'] = pd.to_datetime(datetime.utcnow())
-
-    # print("ticker_df")
-    # print(pd.DataFrame(json_obj,index=[0]))
-    
-    # print(ticker_df)
-    # ticker_df[fmt_df.index.tolist()] = fmt_df['1'].values
-    
     return fmt_df
 
 def get_tickers_data(symbol_list):
