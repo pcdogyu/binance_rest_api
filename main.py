@@ -30,19 +30,6 @@ def get_single_tickr_data(symbol):
     # ticker_df[fmt_df.index.tolist()] = fmt_df['1'].values
     
     return fmt_df
-    
-    
-def pdtest():
-    mydataset = {
-  'sites': ["Google", "Runoob", "Wiki"],
-  'number': [1, 2, 3]}
-    myvar = pd.DataFrame(mydataset)
-    print(myvar)
-def listtest():
-    example_list = ['a', 'b', 'c', 'd']
-    for i in range(len(example_list)):
-        result = example_list[i]
-        print(result)
 
 def get_tickers_data(symbol_list):
     tickers_df = pd.DataFrame()
@@ -53,21 +40,10 @@ def get_tickers_data(symbol_list):
     return tickers_df
 
 def main():
-    # listtest()
     symbol_list = ['BTCUSDT','ETHUSDT','BCHUSDT','LTCUSDT']
     tickers_df = get_tickers_data(symbol_list)
     print(tickers_df[['symbol','askQty','askPrice','bidPrice', 'bidQty','volume', 'closeTime']])
-    # for i in range(len(symbol_list)):
-    #     get_single_tickr_data(symbol_list[i])
-        
-        
-    # get_single_tickr_data(symbol)
-    # pdtest()
-    # symbol = ('ETHUSDT')
-    # symbol = ('ETHUSDT')
-    # ticker_df = get_single_tickr_data(symbol)
-    # ticker_df['closeTime'] = pd.to_datetime(datetime.utcnow())
-    # print(ticker_df[['symbol','prevClosePrice','closeTime']])
+
     
     
 if __name__ == '__main__':
